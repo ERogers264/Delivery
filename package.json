@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "release-it": "^15.11.0"
+  },
+  "npm": {
+    "publish": true
+  }
+}
