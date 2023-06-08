@@ -1,0 +1,23 @@
+name: PR
+
+on:
+  pull request:
+    branches:
+      - main
+      paths:
+      - '**.tf'
+
+
+jobs:
+    validate:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v3
+      - uses: hashicorp/setup- terraform@v2
+
+      - name: Check if terraform fmt was run
+        id: fmt
+        run: terraform fmt - recursive - check
+
+    
+      
